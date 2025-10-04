@@ -1,4 +1,8 @@
-# WebPoster
+# Poster-ISWC2025-TimeFunctions
+
+🪧 Poster for for the demo article on "It’s About Time: Time Functions for Comparing Partial and Floating Time Literals in SPARQL"
+
+---
 
 Kick-start the creation of your RDFa-annotated Web poster in HTML.
 

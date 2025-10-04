@@ -4,14 +4,15 @@
     <meta charset="UTF-8"/>
     <link rel="icon" type="image/svg+xml" href="/img/logos/logo-ugent.svg"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>My Awesome Poster</title>
+    <title>My Poster</title>
 </head>
 <body prefix="rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# foaf: http://xmlns.com/foaf/0.1/ owl: http://www.w3.org/2002/07/owl# xsd: http://www.w3.org/2001/XMLSchema# org: http://www.w3.org/ns/org# schema: http://schema.org/ cite: http://purl.org/spar/cito/"
       typeof="schema:Poster">
 <div id="app">
     <header class="bg-dark" style="grid-column: 1/13; grid-row: 1/3;">
         <div style="margin: 10px;">
-            <h1 property="schema:name schema:headline" class="title">My Awesome Poster</h1>
+            <h1 property="schema:name schema:headline" class="title">It’s About Time: Time Functions for Comparing Partial and Floating Time Literals in
+                SPARQL</h1>
             <h2 class="authors">
                 <a property="schema:author" href="https://smessaert.be/" resource="https://smessaert.be/#me">Ieben Smessaert</a>,
                 <a property="schema:author" href="https://julianrojas.org/" resource="https://julianrojas.org/#me">Julián Rojas Meléndez</a>,
@@ -22,47 +23,106 @@
         </div>
     </header>
 
-    <section class="bg-light" style="grid-column: 1/9; grid-row: 3/6; margin-left: 10px;" rel="schema:hasPart" resource="#introduction">
-        <h2 property="schema:name">Introduction</h2>
+    <section class="bg-light" style="grid-column: 1/7; grid-row: 3/6; margin-left: 10px;" rel="schema:hasPart" resource="#temporal-data-querying">
+        <h2 property="schema:name">SPARQL temporal data querying</h2>
         <ul>
             <li>
-                <i class="fa-solid fa-circle-exclamation fa-2xs li-icon"></i> Lorem ipsum dolor sit amet.
+                <i class="fa-solid fa-code-compare fa-2xs li-icon"></i> SPARQL Operator Mappings don't support<br/><span style="margin-left: 1em;"></span>cross-datatype comparisons
             </li>
             <li style="margin-top: 1.5em;">
-                <i class="fa-solid fa-question-circle fa-2xs li-icon"></i> Ex sapien vitae pellentesque sem placerat in id.
+                <i class="fa-solid fa-comment-nodes fa-2xs li-icon"></i> Poor temporal data publishing practices
                 <ul>
-                    <li style="margin-top: 0.5em;"><i class="fa-solid fa-share fa-2xs li-icon" style="transform: scale(1, -1)"></i> Pretium tellus duis convallis tempus leo eu aenean.</li>
-                    <li style="margin-top: 1em;"><i class="fa-solid fa-share fa-2xs li-icon" style="transform: scale(1, -1)"></i> Semper vel class aptent taciti sociosqu ad litora.</li>
+                    <li style="margin-top: 0.5em;"><i class="fa-solid fa-share fa-2xs li-icon" style="transform: scale(1, -1)"></i> Floating times cause ambiguity, making <br/><span style="margin-left: 1em;"></span>consistent comparison and sorting unreliable</li>
+                    <li style="margin-top: 1em;"><i class="fa-solid fa-share fa-2xs li-icon" style="transform: scale(1, -1)"></i> E.g., Wikidata's inaccurate data types <br/><span style="margin-left: 1em;"></span>undermines temporal reasoning</li>
                 </ul>
             </li>
         </ul>
     </section>
 
-    <section class="bg-accent" style="grid-column: 1/9; grid-row: 6/9; margin-left: 10px;" rel="schema:hasPart" resource="#icons">
-        <h2 property="schema:name" style="color: white;">Using icons</h2>
-        <p>To add icons to your lists, you can use FontAwesome icons. For example:</p>
-        <pre><code>&lt;i class="fa-solid fa-circle-exclamation fa-2xs li-icon"&gt;&lt;/i&gt;</code></pre>
-        <p>For more information on how to use FontAwesome icons, visit <a href="https://fontawesome.com/icons" target="_blank">fontawesome.com/icons</a>.</p>
+    <section class="bg-light" style="grid-column: 7/13; grid-row: 3/6; margin-right: 10px;" rel="schema:hasPart" resource="#wikidata-hallucination">
+        <h2 property="schema:name">Wikidata hallucinating 1 specific point in time from a period</h2>
+        <img src="img/wikidata.svg" alt="Wikidata problem illustration with hallucinating point in time from a period"
+             style="width: 95%; position: absolute; left: 10px; top: 100px;"/>
+
+        <img src="/img/qr-wikidata-ui.svg" alt="QR code linking to UI of Wikidata"
+             style="height: 30px; position: absolute; top: 105px; left: 10px;"/>
+        <strong style="position: absolute; top: 106px; left: 45px; margin: 0; font-size: 12px; color: #111827;">UI</strong>
+        <a style="position: absolute; top: 120px; left: 45px; margin: 0; font-size: 12px;"
+           href="https://www.wikidata.org/wiki/Q45446">wikidata.org/wiki/Q45446</a>
+
+        <img src="/img/qr-wikidata-query.svg" alt="QR code linking to UI of Wikidata"
+             style="height: 30px; position: absolute; top: 235px; left: 10px;"/>
+        <strong style="position: absolute; top: 236px; left: 45px; margin: 0; font-size: 12px; color: #111827;">Query</strong>
+        <a style="position: absolute; top: 250px; left: 45px; margin: 0; font-size: 12px;"
+           href="https://w.wiki/BaPd">w.wiki/BaPd</a>
     </section>
 
-    <section class="bg-light" style="grid-column: 9/13; grid-row: 3/9; margin-right: 10px;" rel="schema:hasPart" resource="#getting-started">
-        <h2 property="schema:name">Getting Started</h2>
-        <p>You can configure your theme colors in <span class="text-secondary">css/style.scss</span>.</p>
-        <p>You can choose different section layouts by using the grid-column and grid-row CSS properties.</p>
-        <p>By default, a 12 by 12 grid is configured. Spanning the full width is done with the value <span class="text-secondary">1/13</span> which means, from the start of grid 1 to the start of grid 13 (or thus end of 12).</p>
-        <p>For example, to create a section that spans the full width and 3 rows in height, you can use the following CSS properties:</p>
-        <pre><code>grid-column: 1/13; grid-row: 3/6;</code></pre>
-        <p>To add some spacing, you can use margin-left and margin-right properties.</p>
-        <p>For more information on CSS Grid, visit <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">css-tricks.com/snippets/css/complete-guide-grid/</a>.</p>
+    <section class="bg-accent" style="grid-column: 1/13; grid-row: 6/9; margin-left: 10px; margin-right: 10px; display: flex; justify-content: center;" rel="schema:hasPart" resource="#time-functions-example">
+        <h2 property="schema:name" style="position: absolute; font-size: 17px; left: 10px;">Earliest–latest bounded interval interpretation<br/>reveals partial times may overlap</h2>
+        <img src="img/TimeFunctions-Figure.svg" alt="Time Functions Overview" style="width: 100%;"/>
     </section>
 
-    <section class="bg-light" style="grid-column: 1/13; grid-row: 9/12; margin-left: 10px; margin-right: 10px;" rel="schema:hasPart" resource="#conclusion">
-        <h2 property="schema:name">Results and Conclusion</h2>
+    <section class="bg-light" style="grid-column: 1/9; grid-row: 9/12; margin-left: 10px;" rel="schema:hasPart" resource="#time-functions">
+        <h2 property="schema:name" style="margin-bottom: 0;">Time Functions enable consistent<br/>and type-agnostic comparisons</h2>
+        <p style="margin-top: 0;"><a href="https://w3id.org/time-fn#" target="_blank"><small>https://w3id.org/time-fn#</small></a></p>
+        <p style="margin: 0">With <i class="text-secondary">"2025-08"^^xsd:gYearMonth AS ?tL</i></p>
+        <ul style="padding-inline-start: 0; margin-block-start: 0.25em; list-style-type: none;">
+            <li style="height: 2em;">
+                <i class="fa-solid fa-gear fa-2xs li-icon"></i> tfn:periodMinInclusive(<span class="text-secondary">?tL</span>)&nbsp;&nbsp;&nbsp;→ <small><i class="text-secondary">"2025-08-01T00:00:00.000+14:00"^^xsd:dateTime</i></small>
+            </li>
+            <li style="height: 2em;">
+                <i class="fa-solid fa-gear fa-2xs li-icon"></i> tfn:periodMinExclusive(<span class="text-secondary">?tL</span>)&nbsp;&nbsp;→ <small><i class="text-secondary">"2025-07-31T23:59:59.999+14:00"^^xsd:dateTime</i></small>
+            </li>
+            <li style="height: 2em;">
+                <i class="fa-solid fa-gear fa-2xs li-icon"></i> tfn:periodMaxInclusive(<span class="text-secondary">?tL</span>)&nbsp;&nbsp;→ <small><i class="text-secondary">"2025-08-31T23:59:59.999-14:00"^^xsd:dateTime</i></small>
+            </li>
+            <li style="height: 2em;">
+                <i class="fa-solid fa-gear fa-2xs li-icon"></i> tfn:periodMaxExclusive(<span class="text-secondary">?tL</span>)&nbsp;→ <small><i class="text-secondary">"2025-09-01T00:00:00.000-14:00"^^xsd:dateTime</i></small>
+            </li>
+            <li style="height: 2em;">
+                <i class="fa-solid fa-gear fa-2xs li-icon"></i> tfn:bindDefaultTimezone(<span class="text-secondary">?tL, "+02:00"</span>) → <small><i class="text-secondary">"2025-08+02:00"^^xsd:gYearMonth</i></small>
+            </li>
+        </ul>
+
+        <a href="https://comunica.dev" target="_blank">
+            <img src="/img/comunica.svg" alt="Comunica logo" style="height: 60px; position: absolute; top: 10px; right: 10px;"/>
+        </a>
+        <a href="https://fno.io" target="_blank">
+            <img src="/img/fno.svg" alt="The Function Ontology logo" style="height: 30px; position: absolute; top: 18px; right: 70px;"/>
+            <p style="position: absolute; top: 52px; right: 74px; margin: 0; font-size: 12px; color: #374151;">FnO</p>
+        </a>
     </section>
 
-    <div class="logo" style="grid-column: 1/3;">
+    <section class="bg-light" style="grid-column: 9/13; grid-row: 9/12; margin-right: 10px; padding-right: 0; padding-left: 8px;" rel="schema:hasPart" resource="#community-discussion">
+        <h2 property="schema:name" style="color: #111827; font-size: 1.35em;">Community discussion</h2>
+        <ul>
+            <li>
+                <i class="fa-solid fa-gear fa-2xs li-icon"></i> The proposed SPARQL <br/><span style="margin-left: 1em;"></span>extension functions enable <br/><span style="margin-left: 1em;"></span>comparing floating & partial times
+            </li>
+            <li style="margin-top: 0.7em;">
+                <i class="fa-solid fa-calendar-check fa-2xs li-icon"></i> We urge data publishers to <br/><span style="margin-left: 1em;"></span> use explicit time zones and <br/><span style="margin-left: 1em;"></span>accurate data types
+            </li>
+            <li style="margin-top: 0.7em;">
+                <i class="fa-brands fa-github fa-2xs li-icon"></i> Contribute to the W3C SPARQL <br/><span style="margin-left: 1em;"></span>Query discussion on implicit time <br/><span style="margin-left: 1em;"></span>zones in comparison and sorting
+            </li>
+        </ul>
+        <p style="margin-top: 0; margin-left: 1.8em; position: absolute; bottom: -2px; left: 10px;"><a href="https://github.com/w3c/sparql-query/issues/116" target="_blank"><small>github.com/w3c/sparql-query/issues/116</small></a></p>
+
+        <img src="/img/qr-gh-discussion.svg" alt="QR code linking to GitHub discussion on implicit time zones in comparison and sorting in W3C SPARQL Query"
+             style="height: 25px; position: absolute; bottom: 8px; left: 8px;"/>
+    </section>
+
+    <div class="qr-code" style="grid-column: 1/3;">
+        <a property="schema:publication" href="https://smessie.github.io/Article-ISWC2025-TimeFunctions/" resource="https://smessie.github.io/Article-ISWC2025-TimeFunctions/" target="_blank" style="text-decoration: none; color: inherit;">
+            <img src="/img/qr-code-article.svg" alt="Read Article" style="height: 60px;"/>
+            <p>Read More</p>
+        </a>
     </div>
-    <div class="logo" style="grid-column: 3/5;">
+    <div class="qr-code" style="grid-column: 3/5;">
+        <a property="schema:workExample" href="https://smessie.github.io/TimeFunctions-SPARQL-Editor/" resource="https://smessie.github.io/TimeFunctions-SPARQL-Editor/" target="_blank" style="text-decoration: none; color: inherit;">
+            <img src="/img/qr-code-demo.svg" alt="Try Demo App" style="height: 60px;"/>
+            <p>Try Demo</p>
+        </a>
     </div>
     <div class="logo" style="grid-column: 5/7;">
         <a href="https://www.ugent.be/en" target="_blank">
