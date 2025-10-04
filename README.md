@@ -1,6 +1,6 @@
 # Poster-ISWC2025-TimeFunctions
 
-🪧 Poster for for the demo article on "It’s About Time: Time Functions for Comparing Partial and Floating Time Literals in SPARQL"
+🪧 Poster for the [demo](https://smessie.github.io/TimeFunctions-SPARQL-Editor/) article on ["It’s About Time: Time Functions for Comparing Partial and Floating Time Literals in SPARQL"](https://smessie.github.io/Article-ISWC2025-TimeFunctions/)
 
 ---
 
