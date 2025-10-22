@@ -94,15 +94,24 @@ a {
 
 .title {
   font-size: 34px;
+  margin-block-end: 0.4em;
 }
 
 .authors {
   font-size: 18px;
+  margin-block-end: 5px;
+}
+
+.email {
+  font-size: 12px;
+  margin-block-start: 5px;
+  margin-block-end: 5px;
 }
 
 .affiliations {
   font-size: 12px;
   font-style: italic;
+  margin-block-start: 5px;
 }
 
 .text-secondary {
